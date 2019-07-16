@@ -7,7 +7,7 @@ let package = Package(
     name: "DragDrop",
     platforms: [
         .iOS(.v13)
-    ]
+    ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
