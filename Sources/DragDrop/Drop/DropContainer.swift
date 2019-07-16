@@ -8,19 +8,19 @@
 
 import SwiftUI
 
-struct DropContainer<V: View> : View {
+public struct DropContainer<V: View> : View {
     
     @EnvironmentObject var manager: DragNDropManager
-    let elementId: UUID
+    public let elementId: UUID
     private let makeView: (Bool)-> V
     
-    init(id: UUID, @ViewBuilder _ factory: @escaping (Bool) -> V) {
+    public init(id: UUID, @ViewBuilder _ factory: @escaping (Bool) -> V) {
         self.elementId = id
         self.makeView = factory
     }
     
-    var body: some View {
+    public var body: some View {
         makeView(manager.canDrop(on: elementId))
-            .droppable(containerId: elementId, manager: manager)
+            .droppable(containerId: elementId)
     }
 }

@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct DragElementModifier: ViewModifier {
+public struct DragElementModifier: ViewModifier {
     
-    let manager: DragNDropManager
-    let elementId: UUID
+    @EnvironmentObject var manager: DragNDropManager
+    public let elementId: UUID
     
     public func body(content: Content) -> some View {
         return content

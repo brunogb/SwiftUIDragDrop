@@ -8,14 +8,14 @@
 import Combine
 import SwiftUI
 
-struct InteractiveContainer<V: View> : View {
+public struct InteractiveContainer<V: View> : View {
     
     let manager: DragNDropManager = DragNDropManager()
     
-    var body: _ModifiedContent<V, _EnvironmentKeyWritingModifier<DragNDropManager?>>
+    public var body: AnyView
     
-    init(@ViewBuilder _ factory: () -> V) {
-        self.body  = factory().environmentObject(manager)
+    public init(@ViewBuilder _ factory: () -> V) {
+        self.body = AnyView(factory().environmentObject(manager))
     }
     
 }

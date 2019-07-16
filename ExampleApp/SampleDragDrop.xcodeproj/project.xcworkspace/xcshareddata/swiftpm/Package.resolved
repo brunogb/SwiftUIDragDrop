@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DragDrop",
+        "repositoryURL": "https://github.com/brunogb/SwiftUIDragDrop",
+        "state": {
+          "branch": "master",
+          "revision": "8224d39731f5e028438b2f4210d9e139c31c9473",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

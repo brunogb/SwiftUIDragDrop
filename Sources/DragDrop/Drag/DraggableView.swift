@@ -8,24 +8,24 @@
 
 import SwiftUI
 
-struct DraggableView<V: View> : View {
+public struct DraggableView<V: View> : View {
     
     @EnvironmentObject var manager: DragNDropManager
-    let elementId: UUID
+    public let elementId: UUID
     private let makeView: (DragInfo)-> V
     
-    struct DragInfo {
+    public struct DragInfo {
         let isDragging: Bool
         let offset: CGSize
     }
     
-    init(id: UUID, @ViewBuilder _ factory: @escaping (DragInfo) -> V) {
+    public init(id: UUID, @ViewBuilder _ factory: @escaping (DragInfo) -> V) {
         self.elementId = id
         self.makeView = factory
     }
     
-    var body: some View {
+    public var body: some View {
         let info = DragInfo(isDragging: manager.isDragging(id: elementId), offset: manager.draggingOffset(for: elementId))
-        return makeView(info).offset(info.offset).draggable(id: elementId, manager: manager)
+        return makeView(info).offset(info.offset).draggable(id: elementId)
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		87480AD422DE0F0200588A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87480AD322DE0F0200588A9E /* Assets.xcassets */; };
 		87480AD722DE0F0200588A9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87480AD622DE0F0200588A9E /* Preview Assets.xcassets */; };
 		87480ADA22DE0F0200588A9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87480AD822DE0F0200588A9E /* LaunchScreen.storyboard */; };
+		87480AE322DE112100588A9E /* DragDrop in Frameworks */ = {isa = PBXBuildFile; productRef = 87480AE222DE112100588A9E /* DragDrop */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87480AE322DE112100588A9E /* DragDrop in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +93,9 @@
 			dependencies = (
 			);
 			name = SampleDragDrop;
+			packageProductDependencies = (
+				87480AE222DE112100588A9E /* DragDrop */,
+			);
 			productName = SampleDragDrop;
 			productReference = 87480ACA22DE0F0100588A9E /* SampleDragDrop.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 87480AC122DE0F0100588A9E;
+			packageReferences = (
+				87480AE122DE112100588A9E /* XCRemoteSwiftPackageReference "SwiftUIDragDrop" */,
+			);
 			productRefGroup = 87480ACB22DE0F0100588A9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -296,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bgondim.SampleDragDrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bgondim.SampleDragDrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -342,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		87480AE122DE112100588A9E /* XCRemoteSwiftPackageReference "SwiftUIDragDrop" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/brunogb/SwiftUIDragDrop";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		87480AE222DE112100588A9E /* DragDrop */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87480AE122DE112100588A9E /* XCRemoteSwiftPackageReference "SwiftUIDragDrop" */;
+			productName = DragDrop;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87480AC222DE0F0100588A9E /* Project object */;
 }

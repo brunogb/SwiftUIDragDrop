@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-extension View {
-    func draggable(id: UUID, manager: DragNDropManager) -> Self.Modified<DragElementModifier> {
-        Modified(content: self, modifier: DragElementModifier(manager: manager, elementId: id))
+public extension View {
+    func draggable(id: UUID) -> Self.Modified<DragElementModifier> {
+        Modified(content: self, modifier: DragElementModifier(elementId: id))
     }
 }
