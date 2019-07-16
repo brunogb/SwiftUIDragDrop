@@ -9,6 +9,17 @@
 import SwiftUI
 import DragDrop
 
+//struct ContentView : View {
+//
+//    let container1ID = UUID()
+//    let container2ID = UUID()
+//    let dragID = UUID()
+//
+//    var body: some View {
+//        EmptyView()
+//    }
+//}
+
 struct ContentView : View {
     
     let container1ID = UUID()
