@@ -91,6 +91,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8713C48422DE154400B53C94 /* PBXTargetDependency */,
 			);
 			name = SampleDragDrop;
 			packageProductDependencies = (
@@ -161,6 +162,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8713C48422DE154400B53C94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8713C48322DE154400B53C94 /* DragDrop */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		87480AD822DE0F0200588A9E /* LaunchScreen.storyboard */ = {
@@ -363,6 +371,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8713C48322DE154400B53C94 /* DragDrop */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87480AE122DE112100588A9E /* XCRemoteSwiftPackageReference "SwiftUIDragDrop" */;
+			productName = DragDrop;
+		};
 		87480AE222DE112100588A9E /* DragDrop */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 87480AE122DE112100588A9E /* XCRemoteSwiftPackageReference "SwiftUIDragDrop" */;

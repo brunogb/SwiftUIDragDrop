@@ -15,8 +15,8 @@ public struct DraggableView<V: View> : View {
     private let makeView: (DragInfo)-> V
     
     public struct DragInfo {
-        let isDragging: Bool
-        let offset: CGSize
+        public let isDragging: Bool
+        public let offset: CGSize
     }
     
     public init(id: UUID, @ViewBuilder _ factory: @escaping (DragInfo) -> V) {
