@@ -1,2 +1,3 @@
-# SwiftUIDragDrop
-SwiftUI support for drag and drop on iOS
+# DragDrop
+
+A description of this package.
