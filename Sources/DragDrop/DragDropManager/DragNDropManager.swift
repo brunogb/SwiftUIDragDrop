@@ -13,7 +13,7 @@ class DragNDropManager: Identifiable, BindableObject {
     
     let id: UUID = UUID()
     
-    let didChange = PassthroughSubject<Void, Never>()
+    let willChange = PassthroughSubject<Void, Never>()
     
     private var containersMap: [UUID: CGRect] = [:]
     private var draggableViewsMap: [UUID: CGRect] = [:]
@@ -21,7 +21,7 @@ class DragNDropManager: Identifiable, BindableObject {
     private var currentDraggingViewID: UUID? {
         didSet {
             if currentDraggingViewID != oldValue {
-                self.didChange.send()
+                self.willChange.send()
             }
         }
     }
@@ -29,7 +29,7 @@ class DragNDropManager: Identifiable, BindableObject {
     private var currentDraggingOffset: CGSize = .zero {
         didSet {
             if currentDraggingOffset.width != oldValue.width || currentDraggingOffset.height != oldValue.height {
-                self.didChange.send()
+                self.willChange.send()
             }
         }
     }
