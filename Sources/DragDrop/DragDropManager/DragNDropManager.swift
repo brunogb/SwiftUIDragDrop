@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-class DragNDropManager: Identifiable, BindableObject {
+class DragNDropManager: Identifiable, ObservableObject {
     
     let id: UUID = UUID()
     
