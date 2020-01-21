@@ -9,7 +9,7 @@
 import SwiftUI
 
 public extension View {
-    func droppable(containerId: UUID)-> Self.Modified<DropContainerModifier> {
-        Modified(content: self, modifier: DropContainerModifier(elementId: containerId))
+    func droppable(containerId: UUID)-> ModifiedContent<Self, DropContainerModifier> {
+        ModifiedContent(content: self, modifier: DropContainerModifier(elementId: containerId))
     }
 }
